@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "outputDirectory": ".",
   "builds": [
     {
       "src": "./app.js",
@@ -13,8 +12,12 @@
   ],
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/",
       "dest": "app.js"
-    }
+    },
+    {
+        "src": "/(.+)",
+        "dest": "public/$1"
+    }    
   ]
 }
